@@ -1,5 +1,5 @@
 """
-NYPD AP License Server
+Tosh1ro AP License Server
 ----------------------
 Simple Flask server for one-time, computer-bound activation.
 
@@ -24,7 +24,7 @@ app = Flask(__name__)
 BASE_DIR = Path(__file__).resolve().parent
 DB = str(BASE_DIR / "licenses.db")
 
-APP_ID = "nypd_ap_v1"
+APP_ID = "tosh1ro_ap_v1"
 
 
 def db():
@@ -57,7 +57,7 @@ def hash_value(value):
 def home():
     return jsonify(
         ok=True,
-        message="NYPD AP License Server is running."
+        message="Tosh1ro AP License Server is running."
     )
 
 @app.post("/activate")
